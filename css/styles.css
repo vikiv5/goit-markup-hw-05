@@ -18,9 +18,14 @@ ul,
 p {
   margin: 0;
 }
+
 ul {
   padding-left: 0;
 }
+a{
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--discription-text-color);
@@ -99,6 +104,7 @@ body {
 }
 .header-contact svg {
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contacts:hover svg,
 .header-contacts:focus svg {
@@ -107,6 +113,7 @@ body {
 .header-contacts:hover svg,
 .header-contacts:focus svg {
   fill: currentColor;
+  
 }
 .header-contact .header-contacts {
   display: flex;
@@ -200,6 +207,7 @@ body {
   padding: 10px 32px;
   margin-top: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -223,6 +231,7 @@ body {
   padding: 6px 22px;
 
   border: 1px solid transparent;
+
 }
 .btn:hover,
 .btn:focus {
@@ -230,6 +239,8 @@ body {
   color: var(--discription-text-color);
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  
 }
 /* section about*/
 
@@ -379,7 +390,7 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.projects-list p {
+.text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--secondary-text-color);
@@ -400,6 +411,30 @@ body {
   border-bottom: 1px solid rgba(238, 238, 238, 1);
   border-left: 1px solid rgba(238, 238, 238, 1);
   border-right: 1px solid rgba(238, 238, 238, 1);
+}
+.project-wrap{
+  position: relative;
+  overflow: hidden;
+}
+.project-details{
+  
+font-weight: 400;
+font-size: 18px;
+line-height: 1.55;
+color:var(--discription-text-color);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 1000ms ;
+}
+.project-img :hover .project-details{
+  transform: translateY(0);
+
 }
 .partners-list {
   display: flex;
@@ -517,6 +552,7 @@ body {
   justify-content: center;
   align-items: center;
   fill: var(--discription-text-color);
+  
 }
 .footer-social:hover,
 .footer-social:focus {
